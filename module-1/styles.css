@@ -19,17 +19,24 @@ body {
 .intro-chunk {
   margin: 96px 0 64px;
   max-width: 450px;
-  padding: 24px;
+  padding: 0 24px;
 }
 
 .title {
   font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
   margin-bottom: 48px;
 }
 
-.intro-chunk p {
+p {
   font-size: 1.25rem;
   line-height: 1.5;
+  margin: 16px 0;
+}
+
+p:last-child {
+  margin: 0;
 }
 
 .intro-chunk p > strong {
@@ -39,7 +46,6 @@ body {
 main {
   background-color: hsl(0deg, 0%, 40%);
   border-top: 8px solid hsl(0deg, 0%, 60%);
-  min-height: 450px;
   padding: 64px 0;
 }
 
@@ -58,9 +64,4 @@ main {
   margin: 0;
   margin-top: -16px;
   margin-left: -32px;
-}
-
-.card p {
-  font-size: 1.25rem;
-  line-height: 1.5;
 }
