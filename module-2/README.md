@@ -14,21 +14,21 @@ For this workshop, we're only targeting desktops (although if you're so inclined
 
 ## Setup Instructions
 
-This project uses create-react-app.
+This project uses vite.
 
 Start by installing dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 Boot up a dev server:
 
 ```
-npm run start
+yarn run dev
 ```
 
-You should be able to access the application at `http://localhost:3000`.
+You should be able to access the application at `http://localhost:5173`.
 
 ## Troubleshooting
 
@@ -53,14 +53,10 @@ This project uses **CSS Modules**. CSS modules are ultimately very similar to va
 
 ```js
 /* Something.js */
-import styles from './Something.module.css';
+import styles from "./Something.module.css";
 
 function Something() {
-  return (
-    <div className={styles.wrapper}>
-      I'll be 500px wide!
-    </div>
-  );
+  return <div className={styles.wrapper}>I'll be 500px wide!</div>;
 }
 ```
 

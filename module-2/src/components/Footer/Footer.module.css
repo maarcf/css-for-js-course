@@ -6,3 +6,11 @@
   text-align: center;
 }
 
+.link {
+  color: inherit;
+}
+
+.link:hover, .link:visited {
+  color: inherit;
+}
+
