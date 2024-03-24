@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  padding: 64px;
+  background: hsl(0deg, 0%, 5%);
+  color: white;
+  text-align: center;
+}
+
+.link {
+  color: inherit;
+}
+
+.link:hover, .link:visited {
+  color: inherit;
+}
+
