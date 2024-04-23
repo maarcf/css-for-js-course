@@ -1,0 +1,30 @@
+import { Story } from "@storybook/addon-docs/blocks";
+import ProgressBar from "./ProgressBar";
+
+export default {
+  title: "components/ProgressBar",
+  component: ProgressBar,
+  argTypes: {
+    value: {
+      control: {
+        type: "number",
+        min: 0,
+        max: 100,
+      },
+    },
+    size: {
+      control: {
+        type: "select",
+        options: ["small", "medium", "large"],
+      },
+    },
+  },
+};
+
+export const Template = args => <ProgressBar {...args} />;
+
+// # ProgressBar
+
+<Story name="Default" args={{ value: 50, size: "medium" }}>
+  {Template.bind({})}
+</Story>;
