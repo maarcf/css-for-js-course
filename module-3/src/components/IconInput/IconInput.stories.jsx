@@ -10,16 +10,12 @@ export default {
       },
     },
     icon: {
-      control: {
-        type: "select",
-        options: ["search", "at-sign"],
-      },
+      control: { type: "select" },
+      options: ["search", "at-sign"],
     },
     size: {
-      control: {
-        type: "select",
-        options: ["small", "large"],
-      },
+      control: { type: "select" },
+      options: ["small", "large"],
     },
     label: {
       control: {
@@ -27,9 +23,7 @@ export default {
       },
     },
     width: {
-      control: {
-        type: "number",
-      },
+      control: { type: "number" },
     },
   },
 };
@@ -37,17 +31,19 @@ export default {
 const Template = args => <IconInput {...args} />;
 
 export const Small = Template.bind({});
-export const Medium = Template.bind({});
-Medium.args = {
-  placeholder: "Search…",
-  label: "Search",
-  icon: "search",
-  size: "medium",
+export const Medium = {
+  args: {
+    placeholder: "Search…",
+    label: "Search",
+    icon: "search",
+    size: "medium",
+  },
 };
-export const Large = Template.bind({});
-Large.args = {
-  placeholder: "Search…",
-  label: "Search",
-  icon: "search",
-  size: "large",
+export const Large = {
+  args: {
+    placeholder: "Search…",
+    label: "Search",
+    icon: "search",
+    size: "large",
+  },
 };

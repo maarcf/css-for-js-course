@@ -1,5 +1,5 @@
-import React from "react";
-import { Story } from "@storybook/addon-docs/blocks";
+import React, { useState } from "react";
+
 import Select from "./Select";
 
 export default {
@@ -7,10 +7,8 @@ export default {
   component: Select,
 };
 
-// # Select
-
-export const ManagedSelect = () => {
-  const [value, setValue] = React.useState("newest");
+const ManagedSelect = () => {
+  const [value, setValue] = useState("newest");
   return (
     <>
       <label
@@ -36,6 +34,6 @@ export const ManagedSelect = () => {
   );
 };
 
-<Story name="Default">
-  <ManagedSelect />
-</Story>;
+export const Default = {
+  render: () => <ManagedSelect />,
+};
