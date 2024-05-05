@@ -26,7 +26,7 @@ const ProgressBar = ({ value, size }) => {
   const styles = STYLES[size];
 
   if (!styles) {
-    throw new Error(`Unknow size passed to Progress Bar: ${size}`);
+    throw new Error(`Unknown size passed to Progress Bar: ${size}`);
   }
 
   return (
