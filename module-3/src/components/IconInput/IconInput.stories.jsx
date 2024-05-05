@@ -26,24 +26,24 @@ export default {
       control: { type: "number" },
     },
   },
+  args: {
+    placeholder: "Search…",
+    label: "Search",
+    icon: "search",
+    size: "small",
+  },
 };
 
 const Template = args => <IconInput {...args} />;
 
 export const Small = Template.bind({});
-export const Medium = {
-  args: {
-    placeholder: "Search…",
-    label: "Search",
-    icon: "search",
-    size: "medium",
-  },
-};
+
 export const Large = {
   args: {
     placeholder: "Search…",
     label: "Search",
     icon: "search",
     size: "large",
+    width: 300,
   },
 };
