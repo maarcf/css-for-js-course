@@ -5,7 +5,6 @@ import { DialogOverlay, DialogContent } from "@reach/dialog";
 import UnstyledButton from "../UnstyledButton";
 import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden";
-import { COLORS, WEIGHTS } from "../../constants";
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
   return (
@@ -38,13 +37,13 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 const Overlay = styled(DialogOverlay)`
   position: fixed;
   inset: 0;
-  background: hsl(220deg 5% 50% / 0.8);
+  background-color: var(--color-backdrop);
   display: flex;
   justify-content: flex-end;
 `;
 
 const Content = styled(DialogContent)`
-  background: ${COLORS.white};
+  background: var(--color-white);
   width: 300px;
   height: 100%;
   display: flex;
@@ -59,14 +58,14 @@ const Nav = styled.nav`
 `;
 
 const Link = styled.a`
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.125rem;
-  font-weight: ${WEIGHTS.medium};
+  font-weight: var(--weight-medium);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -79,10 +78,10 @@ const Footer = styled.footer`
 `;
 
 const FooterLink = styled.a`
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: ${WEIGHTS.normal};
+  font-weight: var(--weight-normal);
 `;
 
 const Filler = styled.div`
