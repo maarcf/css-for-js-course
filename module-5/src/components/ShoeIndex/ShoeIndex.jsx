@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WEIGHTS } from "../../constants";
+import { WEIGHTS, QUERIES } from "../../constants";
 
 import Breadcrumbs from "../Breadcrumbs";
 import Select from "../Select";
@@ -33,7 +33,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
           <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href="/sale/shoes">Shoes</Breadcrumbs.Crumb>
         </Breadcrumbs>
-        <Spacer size={42} />
+        <SpacerGap size={42} />
         <ShoeSidebar />
       </LeftColumn>
     </Wrapper>
@@ -45,10 +45,19 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+
+  @media ${QUERIES.tabletAndDown} {
+    flex-direction: column-reverse;
+    gap: inherit;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+
+  @media ${QUERIES.tabletAndDown} {
+    flex-basis: auto;
+  }
 `;
 
 const MainColumn = styled.div`
@@ -64,6 +73,12 @@ const Header = styled.header`
 const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: ${WEIGHTS.medium};
+`;
+
+const SpacerGap = styled(Spacer)`
+  @media ${QUERIES.tabletAndDown} {
+    display: none;
+  }
 `;
 
 export default ShoeIndex;
