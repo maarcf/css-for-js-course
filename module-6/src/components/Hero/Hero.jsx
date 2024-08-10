@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Hero = () => {
   return (
     <Wrapper>
-      {/* <HeroImage src="/images/hero-img.jpg" /> */}
       <picture>
         <source
           type="image/avif"
@@ -22,9 +21,12 @@ const Hero = () => {
             /images/hero-img@3x.jpg 3x
           "
         />
-        <HeroImage alt="" src="/images/hero-img.jpg" />
+        <HeroImage
+          alt="An example of the photos here (cat)"
+          src="/images/hero-img.jpg"
+        />
       </picture>
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
